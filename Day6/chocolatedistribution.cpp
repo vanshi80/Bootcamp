@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>       
+#include<bits/stdc++.h>     
+// #include<algorithm> for sort function and to sort a vector array we require to give sort(arr.begin(),arr.end()); 
 using namespace std;
 int minDiff(int arr[],int n,int m){
     if(m>n) return -1;

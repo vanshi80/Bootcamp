@@ -9,6 +9,7 @@ int findmajority(int arr[],int n){
             count--;
         }
         if(count == 0){
+            count = 1;
             majority_indx = i;
         }
     }
