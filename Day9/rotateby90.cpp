@@ -1,5 +1,24 @@
+// This is matrix rotation in anticlockwise direction.
 #include<bits/stdc++.h>
 using namespace std;
+// to rotate the matrix by 90 deg in clockwise direction we follow the apporach by first reversing the rows and then transposing the matrix
+// void rotate(vector<vector<int>>& matrix) {
+//     int n = matrix.size();
+//     // first reverese the rows
+//     for(int i=0;i<n/2;i++){
+//         for(int j=0;j<n;j++){
+//             int temp = matrix[i][j];
+//             matrix[i][j] = matrix[n-i-1][j];
+//             matrix[n-i-1][j] = temp;
+//         }
+//     }
+//     // now just transpose the matrix
+//     for(int i=0;i<n;i++){
+//         for(int j=i+1;j<n;j++){
+//             swap(matrix[i][j],matrix[j][i]);
+//         }
+//     }
+// }
 void reverse(int** mat,int r,int c){
     for(int i=0;i<c;i++){
         for(int j=i+1;j<r;j++){

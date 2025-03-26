@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 void printtwooddoccuringelem(int arr[],int n){
-    int xorresult = 0;
+    long xorresult = 0; //because there might be very large values of the xorresult like INT_MIN and INT_Max so when we try to 
+    // subtract 1 from them they do not work.
     for(int i=0;i<n;i++){
         xorresult ^= arr[i];
     }

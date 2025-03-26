@@ -1,5 +1,45 @@
 #include<bits/stdc++.h>
 using namespace std;
+// in cpp we could send the vector as argument for the matrix and then calclate the rows and columns and then we could create 
+// an array with some name and then use the push_back function to create the array and then return that
+// class Solution {
+//     public:
+//         vector<int> spiralOrder(vector<vector<int>>& mat) {
+//             int r = mat.size();
+//             int c = mat[0].size();
+//             int top = 0, right = c - 1, bottom = r - 1, left = 0;
+//             vector<int> result;
+    
+//             while (top <= bottom && left <= right) {
+//                 for (int i = left; i <= right; i++) {
+//                     result.push_back(mat[top][i]);
+//                 }
+//                 top++;
+    
+//                 for (int i = top; i <= bottom; i++) {
+//                     result.push_back(mat[i][right]);
+//                 }
+//                 right--;
+    
+//                 if (top <= bottom) {
+//                     for (int i = right; i >= left; i--) {
+//                         result.push_back(mat[bottom][i]);
+//                     }
+//                     bottom--;
+//                 }
+    
+//                 if (left <= right) {
+//                     for (int i = bottom; i >= top; i--) {
+//                         result.push_back(mat[i][left]);
+//                     }
+//                     left++;
+//                 }
+//             }
+            
+//             return result;  // Return the result array with the spiral order
+//         }
+//     };
+    
 void spiraltraversal(int** mat,int r,int c){
     int top = 0,right = c-1,bottom = r-1,left = 0;
     while(top<=bottom && left<=right){

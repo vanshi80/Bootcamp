@@ -2,15 +2,14 @@
 // Boyre Moore Voting Algorithm
 int findmajority(int arr[],int n){
     int count = 1,majority_indx = 0;
-    for(int i=1;i<n;i++){
-        if(arr[i]==arr[majority_indx]){
-            count++;
-        }else{
-            count--;
-        }
-        if(count == 0){
+    for (int i = 0; i < n; i++) {
+        if (count == 0) {
+            majority_indx = i; // Assign current element as the candidate
             count = 1;
-            majority_indx = i;
+        } else if (arr[i] == arr[majority_indx]) {
+            count++; // Same element as candidate, increment count
+        } else {
+            count--; // Different element, decrement count
         }
     }
     count = 0;
